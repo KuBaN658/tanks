@@ -65,6 +65,12 @@ class Ball:
             (self.x, self.y),
             self.r
         )
+        pygame.draw.circle(
+            self.screen,
+            BLACK,
+            (self.x, self.y),
+            self.r, 1
+        )
 
 
     def hittest(self, obj):
@@ -159,7 +165,19 @@ class Target:
         self.points += points
 
     def draw(self):
-        pygame.draw.circle(self.screen, self.color, (self.x, self.y), self.r)
+        pygame.draw.circle(
+            self.screen,
+            self.color,
+            (self.x, self.y),
+            self.r
+        )
+        pygame.draw.circle(
+            self.screen,
+            BLACK,
+            (self.x, self.y),
+            self.r,
+            1
+        )
 
 
 pygame.init()
