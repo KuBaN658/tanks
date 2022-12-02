@@ -4,7 +4,6 @@ from random import choice
 
 import pygame
 
-
 FPS = 30
 
 RED = 0xFF0000
@@ -126,7 +125,7 @@ class Gun:
             self.color = GREY
 
     def draw(self):
-        pygame.draw.rect(self.screen, self.color, (0, 420, 80, 40))
+        pygame.draw.rect(self.screen, self.color, (0, 420, self.f2_power, 40))
 
     def power_up(self):
         if self.f2_on:
